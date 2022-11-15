@@ -22,8 +22,9 @@
 
 
 ### Configuración Apache2 
-`sudo nano /etc/apache2/apache2.conf`  
-
+`sudo nano /etc/apache2/apache2.conf` 
+`modificar el User y el Group`
+`agregar lo siguiente:`
 `<Directory /home/ubuntu/>
         Options Indexes FollowSymLinks
         AllowOverride All
@@ -36,6 +37,11 @@
 
 ### Configuración php.ini
 `sudo nano /etc/php/7.4/apache2/php.ini`
+#### setear un valor diferente en:
+`ctrl + w para hacer una busqueda en nano`
+`memory_limit=128M pasa a 2048M`
+`post_max_size=8M pasa a 2048M`
+`upload_max_filesize=2M  pasa a 2048M`
 
 ### Reinicio del servidor Apache2
 `sudo service apache2 restart`
